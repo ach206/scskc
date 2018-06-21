@@ -1,0 +1,382 @@
+@charset "utf-8";
+/* Comment block like Case Problem Comment Block with
+
+    Last Edited By: A. Camille Hall
+    Created By: A. Camille Hall
+    Date: 04.18.2018
+    Filename: index.css
+
+    styling and structure  for  Somali Community of South King County
+
+
+*/
+html    {
+    background: #fff;
+}
+
+ body {
+    background-color: rgb(63, 133, 252);
+    background-color: rgba(63, 133, 252, .7);
+     height: 80%;
+     max-width: 90vw;
+     margin: 1rem auto;
+     overflow-y: auto;
+     display: flex;
+     /*---dont forget flex extensions*/
+     flex-direction: column;
+     min-height: 100%;
+     font-family: Alegreya, serif;
+}
+
+ /*----------navigation area -----------*/
+ nav, footer {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid white;
+    padding: .5em .5em;
+}
+ div#navBar {
+     padding: 1rem 1rem;
+     text-align: center;
+}
+#navGraphics {
+  width: 30%;
+}
+div#navGraphics h2 {
+font-family: 'Dr Sugiyama', Papyrus, cursive;
+font-size: 2rem;
+color: rgb( 172, 40, 35);
+text-align: left;
+margin: 0;
+}
+
+div#navGraphics h3 {
+    color: green;
+    font-family: 'Code-Pro-Light-Demo';
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: left;
+    margin: 0;
+}
+
+div#navGraphics h3:nth-of-type(2) {
+    color: rgb(172, 40, 35);
+    
+}div#navGraphics h3:nth-of-type(4) {
+    color: rgb(63, 133, 252);
+  
+}
+
+.navIcon {
+  display: none;
+}
+#logoDiv img{
+  width: 40%;
+  display:flex;
+}
+.bars {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+}
+
+#logoBars {
+width: 100%;
+}
+
+#logoBars div {
+  width: 30%;
+  height: 8px;
+  display: inline-flex;
+}
+.red {
+  background-color: rgb(172, 40, 35);
+}
+.green {
+  background-color: green;
+}
+.blue {
+    background-color: rgb(63, 133, 252);
+  }
+/*--------------slideshow--------------*/
+.slideContainer {
+    margin: auto;
+    position: relative;
+    padding: 1rem 0;
+    max-width: 90vw;
+}
+
+.slideImg {
+    display: none;
+    max-width: inherit;
+    width: 100%;
+}
+
+.slideImg img {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.slideDials {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.prev,.next {
+    padding: 1rem;
+    margin-left: auto;
+    top: 50%;
+    font-weight: 700;
+    color: #fff;
+    position: absolute;
+}
+
+.next {
+    right: 0;
+
+}
+.prev:hover ,.next:hover {
+    background-color: #ccc;
+    background-color: rgba(0, 0, 0, .6);
+}
+.dial {
+ cursor: pointer;
+  height: .65em;
+  width: .65em;
+  margin: 0 5px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+       /*---dont forget flex extensions*/
+  transition: background-color 0.4s ease;
+}
+.active, .dial:active, .dial:hover {
+    background-color: #ccc;
+/*    background-color: rgba(0, 0, 0, .6);
+*/
+background-color: rgba(172, 40, 35, .5);
+}
+
+.caption {
+    position: absoulute;
+    text-align: center;
+    font-style: italic;
+
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*------------hyperlinks------------*/
+a {
+    cursor: pointer;
+}
+div#navLinks a, footer {
+    text-decoration: none;
+    color: white;
+    font: .8em Arial;
+    text-transform: uppercase;
+    padding: 2em;
+}
+
+/*-----------section---------*/
+.intro {
+    background: rgba(0, 0, 0, .3);
+}
+
+.intro p {
+    color: white;
+  font-size: 1em;
+  box-sizing: content-box;
+  padding: 0 2em;
+  display: flex;
+  flex: 1 1 600px;
+}
+
+.highlights {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1em 0;
+}
+
+.announce, .testimony {
+  background: #fff;
+  text-align: center;
+  min-width: 300px;
+  max-width: 500px;
+  height: 300px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.highlights p {
+  padding: 0 1em;
+}
+
+.announce p:first-of-type, .testimony p:first-of-type {
+  font-size: 1.5em;
+  color: rgb(78, 78, 78);
+  font-weight: 700;
+
+}
+.announce p:nth-of-type(2), .testimony p:nth-of-type(2) {
+  color: #000;
+}
+.announce p:last-of-type, .testimony p:last-of-type {
+  color: rgb(172, 40, 35);
+  font-size: 0.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hiTitle {
+  width: 100%;
+  height: 25%;
+  background: rgb(172, 40, 35);
+  padding-top: 1em;
+}
+
+.announce h3, .testimony h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+}
+/*------------aside-----------------*/
+/* aside {
+        margin: 0 auto;
+}
+aside img {
+    width: 100%;
+    max-width: 544px;
+    box-sizing: border-box;
+    padding: .2em .5em;
+} */
+
+/*------------footer---------*/
+footer {
+    display: flex;
+    /*---dont forget flex extensions*/
+    justify-content: space-between;
+
+}
+div.footer {
+  box-sizing: border-box;
+  padding: 1rem;
+}
+.footerItem {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+address {
+  display: none;
+}
+
+.fa {
+  padding-left: .5em;
+}
+/*---------------------laptops---------------------*/
+@media only screen and (max-height: 1480px) {
+    body {
+        max-width: 96vw;
+    }
+     nav {
+    /*dont forget the webkit extensions */
+    display: flex;
+    align-items: center;
+ }
+div#navLinks {
+     margin-left: auto;
+}
+a.menuLinks:hover {
+    background-color: rgb(63, 133, 252);
+    background-color: rgba(5, 23, 43, .22);
+}
+
+
+}
+/*-------------screens 769px-1050px vw-------------------*/
+ @media screen and (max-width: 1050px) {
+   .highlights {
+     flex-direction: column;
+     align-items: center;
+   }
+
+   .announce, .testimony {
+     margin: 1em 0;
+     max-width: 100%;
+   }
+
+ }
+/*-------------screens smaller than 769px vw-------------------*/
+ @media screen and (max-width: 768px) {
+body {
+     width: 100%;
+     height: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+div#navGraphics {
+    margin-right: auto;
+}
+
+div#navLinks {
+    margin-left: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.menuLinks {
+  display: none;
+  padding: .7em;
+}
+
+.showMenuLinks {
+  display: block;
+}
+
+div#navLinks a.navIcon {
+  display: block;
+}
+
+.showDrawer {
+  width: 300px;
+  position: absolute;
+  transform: translate(0, 0);
+  transition: transform .3s ease;
+  background: rgba(0, 0, 0, 0.7);
+}
+.highlights {
+  flex-direction: column;
+  align-items: center;
+}
+
+.announce, .testimony {
+  margin: 1em 0;
+}
+
+}

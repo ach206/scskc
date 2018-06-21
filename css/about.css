@@ -1,0 +1,96 @@
+@charset "utf-8";
+/*
+
+    Last Edited By: A. Camille Hall
+    Created By: A. Camille Hall
+    Date: 05.28.2018
+    Filename: about.css
+
+    styling and structure of the about page for Somali Community of South King County
+
+
+*/
+
+main {
+  width: 100%;
+  display: flex;
+  padding: 1.5em 0;
+  justify-content: space-around;
+  align-items: center;
+}
+/*----------section area ------*/
+
+
+.leftSection {
+  width: 40%;
+  box-sizing: content-box;
+  background-color: #fff;
+  border: 1px solid yellow;
+  padding: 40px 10px;
+  position: relative;
+}
+
+.sectionTitle {
+    background-color: green;
+    text-transform: uppercase;
+    font-weight: 600;
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    left: 40%;
+    top: -30px;
+    position: absolute;
+}
+.title {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial;
+    color: #fff;
+}
+p {
+  padding: 0 .5em;
+  font-size: 1.2em;
+}
+/*--------aside area -------*/
+.rightSection {
+  width: 40%;
+}
+aside {
+  box-sizing: content-box;
+  display: flex;
+  align-items: baseline;
+}
+
+aside img {
+  width: 100%;
+}
+
+
+
+/* -------------media for phones ------------ */
+
+@media screen and (max-width: 960px){
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.leftSection {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 0;
+}
+
+.rightSection {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 100%;
+}

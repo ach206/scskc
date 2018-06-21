@@ -1,0 +1,139 @@
+@charset "utf-8";
+/*
+
+    Last Edited By: A. Camille Hall
+    Created By: A. Camille Hall
+    Date: 05.28.2018
+    Filename: about.css
+
+    styling and structure of the about page for Somali Community of South King County
+
+
+*/
+
+main {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+/*----------section area ------*/
+
+section {
+  width: 50%;
+  box-sizing: content-box;
+  display: flex;
+  flex-flow: column;
+}
+
+.sectionText {
+  width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+  border: 1px solid yellow;
+  padding-left: 40px;
+}
+
+.sectionList {
+  position: relative;
+}
+
+.sectionTitle {
+    background-color: yellow;
+    text-transform: uppercase;
+    font-weight: 600;
+    height: 20px;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    left: 40%;
+    top: 5px;
+    position: absolute;
+}
+
+.title {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial;
+}
+p {
+  padding: 0 .5em;
+}
+
+ul {
+  background: #fff;
+  width: 100%;
+  border: 1px solid yellow;
+  padding-top: 20px;
+}
+/*--------aside area -------*/
+.rightSection {
+  width: 40%;
+}
+aside {
+  box-sizing: content-box;
+  display: flex;
+  align-items: baseline;
+}
+
+aside img {
+  width: 100%;
+}
+
+
+/* -------------media for phones ------------ */
+
+@media screen and (max-width: 960px){
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+aside {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+
+/* -------------media for phones ------------ */
+
+@media screen and (max-width: 960px){
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sectionText {
+  padding-left: 0px;
+}
+
+.rightSection {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+.sectionTitle {
+    left: 0;
+    top: 5px;
+}
+
+ul {
+    padding-left: 1.3em;
+}
