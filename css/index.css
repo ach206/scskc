@@ -194,7 +194,7 @@ background-color: rgba(172, 40, 35, .5);
 
 }
 
-/* Fading animation */
+/*--------- Fading animation -------*/
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
