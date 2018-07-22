@@ -4,18 +4,48 @@
     // Filename: index.js
 
 		// shows or hides the drawer depending on the navIcon
-		$(".fa-bars").click(function(event){
-			$("#navLinks").attr("class", "showDrawer");
-			$(".menuLinks").attr("class", "showMenuLinks");
-			event.stopPropagation();
+		(function(){
+
+		drawerIcon = document.querySelector('#navIcon');
+		showDrawer = document.querySelector('#navLinks');
+		showLinks = document.querySelectorAll('a.menuLinks');
+		clicks = 0;
+		function open() {
+		drawerIcon.addEventListener('click', function(e){
+			clicks += 1;
+			if(clicks = 1){
+				showDrawer.classList.toggle('showDrawer');
+				drawerIcon.classList.toggle('fa-bars');
+				drawerIcon.classList.toggle('fa-times');
+
+			showLinks.forEach(function(link){
+				link.classList.toggle('showMenuLinks');
+			});
+			} else {
+				showDrawer.classList.remove('showDrawer');
+				
+			showLinks.forEach(function(link){
+				link.classList.remove('showMenuLinks');
+			});
+			}
+			clicks = 0;
 		});
+		}
+		open();
 
-		$("body").click(function(){
-			$("#navLinks").removeClass("showDrawer");
-			$(".showMenuLinks").attr("class", "menuLinks");
+		// $(".fa-bars").click(function(event){
+		// 	$("#navLinks").attr("class", "showDrawer");
+		// 	$(".menuLinks").attr("class", "showMenuLinks");
+		// 	event.stopPropagation();
+		// });
 
-		});
+		// $("body").click(function(){
+		// 	$("#navLinks").removeClass("showDrawer");
+		// 	$(".showMenuLinks").attr("class", "menuLinks");
 
+		// });
+
+		})();
 // --------------function to loop through the images and hide them by default--------
 var slideIndex = 0;
 slideshow();

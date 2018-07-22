@@ -101,7 +101,7 @@ nav h3:nth-of-type(4) {
   display: flex;
 }
 
-#logoDiv img{
+.imgDiv img {
   width: 5vw;
   min-width: 42px;
 }
@@ -111,7 +111,7 @@ width: 100%;
 }
 
 #logoBars div {
-  width: 30%;
+  width: 33%;
   height: 8px;
   display: inline-flex;
 }
@@ -364,6 +364,7 @@ div#navLinks {
     right: 5vw;
     bottom: auto;
     z-index: 1;
+    display: block;
 }
 
 .menuLinks {
@@ -377,6 +378,11 @@ div#navLinks {
 
 div#navLinks a.navIcon {
   display: block;
+}
+
+#logoBars div {
+  width: 32%;
+
 }
 
 .showDrawer {
