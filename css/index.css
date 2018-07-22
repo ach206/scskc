@@ -21,13 +21,16 @@ html    {
      max-width: 90vw;
      margin: 1rem auto;
      overflow-y: auto;
-     display: flex;
+     display: flex; 
      /*---dont forget flex extensions*/
      flex-direction: column;
      min-height: 100%;
      font-family: Alegreya, serif;
 }
 
+a, a:visited {
+  text-decoration: none;
+}
  /*----------navigation area -----------*/
  nav, footer {
     box-sizing: border-box;
@@ -35,14 +38,36 @@ html    {
     border: 1px solid white;
     padding: .5em .5em;
 }
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+
  div#navBar {
      padding: 1rem 1rem;
      text-align: center;
 }
-#navGraphics {
-  width: 30%;
+
+div#navGraphics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
-div#navGraphics h2 {
+
+#navLinks {
+  display: flex;
+}
+
+#navLinks ul li {
+  list-style: none;
+  display: inline;
+}
+
+nav h2 {
 font-family: 'Dr Sugiyama', Papyrus, cursive;
 font-size: 2rem;
 color: rgb( 172, 40, 35);
@@ -50,7 +75,7 @@ text-align: left;
 margin: 0;
 }
 
-div#navGraphics h3 {
+nav h3 {
     color: green;
     font-family: 'Code-Pro-Light-Demo';
     text-transform: uppercase;
@@ -59,10 +84,11 @@ div#navGraphics h3 {
     margin: 0;
 }
 
-div#navGraphics h3:nth-of-type(2) {
+nav h3:nth-of-type(2) {
     color: rgb(172, 40, 35);
+  }
     
-}div#navGraphics h3:nth-of-type(4) {
+nav h3:nth-of-type(4) {
     color: rgb(63, 133, 252);
   
 }
@@ -70,14 +96,14 @@ div#navGraphics h3:nth-of-type(2) {
 .navIcon {
   display: none;
 }
-#logoDiv img{
-  width: 40%;
-  display:flex;
-}
-.bars {
+
+#logoDiv {
   display: flex;
-  flex-direction: column;
-  width: inherit;
+}
+
+#logoDiv img{
+  width: 5vw;
+  min-width: 42px;
 }
 
 #logoBars {
@@ -89,6 +115,10 @@ width: 100%;
   height: 8px;
   display: inline-flex;
 }
+.bars {
+  width: 100%;
+}
+
 .red {
   background-color: rgb(172, 40, 35);
 }
@@ -186,7 +216,7 @@ background-color: rgba(172, 40, 35, .5);
 a {
     cursor: pointer;
 }
-div#navLinks a, footer {
+nav a, a.menuLinks:visited, footer {
     text-decoration: none;
     color: white;
     font: .8em Arial;
@@ -260,16 +290,6 @@ div#navLinks a, footer {
   font-weight: 600;
   text-align: center;
 }
-/*------------aside-----------------*/
-/* aside {
-        margin: 0 auto;
-}
-aside img {
-    width: 100%;
-    max-width: 544px;
-    box-sizing: border-box;
-    padding: .2em .5em;
-} */
 
 /*------------footer---------*/
 footer {
@@ -283,6 +303,7 @@ div.footer {
   padding: 1rem;
 }
 .footerItem {
+    /*dont forget the webkit extensions */
   display: flex;
   justify-content: space-evenly;
 }
@@ -299,11 +320,7 @@ address {
     body {
         max-width: 96vw;
     }
-     nav {
-    /*dont forget the webkit extensions */
-    display: flex;
-    align-items: center;
- }
+
 div#navLinks {
      margin-left: auto;
 }
@@ -335,9 +352,8 @@ body {
 }
 
 nav {
-    display: flex;
     align-items: flex-end;
-    flex-direction: column;
+;
 }
 
 div#navGraphics {
@@ -345,8 +361,8 @@ div#navGraphics {
 }
 
 div#navLinks {
-    margin-left: 0;
-    position: absolute;
+    right: 5vw;
+    bottom: auto;
     z-index: 1;
 }
 
@@ -364,12 +380,25 @@ div#navLinks a.navIcon {
 }
 
 .showDrawer {
-  width: 300px;
-  position: absolute;
-  transform: translate(0, 0);
-  transition: transform .3s ease;
-  background: rgba(0, 0, 0, 0.7);
+    width: 40vw;
+    position: absolute;
+    top: 30px;
+    left: auto;
+    transform: translate(0, 0);
+    transition: transform .3s ease;
+    background: rgba(0, 0, 0, 0.7);
 }
+
+.showDrawer ul {
+    margin-left: 0;
+    margin-right: auto;
+    margin: 0;
+    text-align: left;
+    padding-left: 0;
+    left: 0;
+}
+
+
 .highlights {
   flex-direction: column;
   align-items: center;
