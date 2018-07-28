@@ -59,23 +59,6 @@ slideIndex = 1;
     slides[slideIndex-1].style.display = "block";
     dials[slideIndex-1].className += " active";
 
-  forward.addEventListener('click', function(e){
-
-         if (slideIndex === dials.length) {
-          slideIndex = 0;
-          } else {
-          	slideshow();
-        }
-  	
-    });
-   back.addEventListener('click', function(e){
-  	        if (slideIndex === 3) {
-          slideIndex = 0;
-        } else {
-          	slideshow();
-      }
- 		
-    });
 
 const transition = setTimeout(slideshow, 4000); /*Change image every 4 seconds*/
 }// --------close slideshow function------
