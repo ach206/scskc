@@ -21,7 +21,7 @@ html    {
      max-width: 90vw;
      margin: 1rem auto;
      overflow-y: auto;
-     display: flex; 
+     display: flex;
      /*---dont forget flex extensions*/
      flex-direction: column;
      min-height: 100%;
@@ -67,15 +67,16 @@ div#navGraphics {
   display: inline;
 }
 
-nav h2 {
-font-family: 'Dr Sugiyama', Papyrus, cursive;
+.compName h2 {
+font-family: 'Dr Sugiyama', Papayrus, cursive;
+text-transform: none;
 font-size: 2rem;
 color: rgb( 172, 40, 35);
 text-align: left;
 margin: 0;
 }
 
-nav h3 {
+.compName h3 {
     color: green;
     font-family: 'Code-Pro-Light-Demo';
     text-transform: uppercase;
@@ -87,10 +88,10 @@ nav h3 {
 nav h3:nth-of-type(2) {
     color: rgb(172, 40, 35);
   }
-    
+
 nav h3:nth-of-type(4) {
     color: rgb(63, 133, 252);
-  
+
 }
 
 .navIcon {
